@@ -1,6 +1,10 @@
 # TheAutomaticProofreader-Decompiled
 
-A decompiled copy of The New Automatic Proofreader with comments
+A decompiled copy of The New Automatic Proofreader with comments.
+
+Watch the video that breaks down how this works:
+
+
 
 ## Decompile it yourself
 
@@ -13,7 +17,9 @@ pD 166
 
 ### da65
 
-
+```
+da65 ap_6502.prg -o ap_decompiled.asm`
+```
 
 ## License
 
