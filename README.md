@@ -2,8 +2,7 @@
 
 A decompiled copy of The New Automatic Proofreader with comments.
 
-Watch the video that breaks down how this works:
-
+Watch the video that breaks down how this works: https://www.youtube.com/watch?v=R8IWYauT-MU
 
 
 ## Decompile it yourself

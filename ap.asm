@@ -24,9 +24,13 @@ LFFD2           := $FFD2
         ;; start of our tokenizer
 
         ;; line number during GOSUB, GOTO, and RUN
-        ;; $a7 and $a8 are RS-232 input stuff
+        ;; $a7 and $a8 are RS-232 input stuff. Let's
+        ;; call them...
+
+        ;; The Sum...
         lda     $14
         sta     $A7
+        ;; ...and the Overflow
         lda     $15
         sta     $A8
 
@@ -50,12 +54,9 @@ make_text_reversed:  lda     $C7,x
         lda     #$12
         jsr     L9BD2
 
-        ;; some places to store data in zero page?
         ldy     #$00
-
         ;; b4 = current character index
         sty     $B4
-
         ;; b0 = are we in a quoted string
         sty     $B0
 
@@ -103,7 +104,7 @@ count_this_character:  pla
         ;; load current char index
         ldx     $B4
 repeatedly_process:  clc
-        ;; take the Character part...
+        ;; take the Sum part...
         lda     $A7
         ;; load this character from input buffer
         ;; this can set the carry bit
@@ -114,7 +115,8 @@ repeatedly_process:  clc
 
         ;; load a8
         lda     $A8
-        ;; we put the # of overflows in here
+        ;; we increment Overflow if it, uh, overflowed
+        ;; we add 0 because the other bit is the Carry flag
         adc     #$00
         sta     $A8
 
