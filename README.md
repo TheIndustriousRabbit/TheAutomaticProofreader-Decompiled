@@ -17,7 +17,7 @@ pD 166
 ### da65
 
 ```
-da65 ap_6502.prg -o ap_decompiled.asm`
+da65 ap_6502.prg -o ap_decompiled.asm
 ```
 
 ## License
